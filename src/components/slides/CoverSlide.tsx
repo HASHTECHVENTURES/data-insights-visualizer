@@ -1,5 +1,6 @@
 import { PresentationSlide } from "../PresentationSlide";
 import CountUp from "react-countup";
+import offeeLogoImage from "@/assets/offee-logo.png";
 
 export const CoverSlide = () => {
   return (
@@ -65,12 +66,13 @@ export const CoverSlide = () => {
           </div>
         </div>
 
-        {/* Logo placeholder - Top Left */}
+        {/* Offee Logo - Top Left */}
         <div className="absolute top-8 left-8 z-10">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-cyan-500 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-lg">O</div>
-            <div className="text-xl font-black tracking-tight text-foreground drop-shadow-md">Offee</div>
-          </div>
+          <img 
+            src={offeeLogoImage} 
+            alt="Offee Logo" 
+            className="h-12 w-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-300"
+          />
         </div>
       </div>
     </PresentationSlide>
