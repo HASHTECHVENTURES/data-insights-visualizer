@@ -4,7 +4,7 @@ export const TalentGrid = () => {
   return (
     <PresentationSlide title="From PLAT Data to India's Talent Grid">
       <div className="w-full max-w-6xl space-y-8">
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8">
+        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 zoom-in">
           <h3 className="text-3xl font-bold text-primary mb-6">
             From 50,000 Students to a National Talent Grid
           </h3>

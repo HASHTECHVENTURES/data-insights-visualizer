@@ -8,10 +8,10 @@ export const ReadinessDistribution = () => {
   return (
     <PresentationSlide title="Insight #1: Industry Readiness Distribution">
       <div className="w-full max-w-6xl space-y-8">
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8">
+        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 zoom-in">
           <h3 className="text-3xl font-bold text-primary mb-6">Only Around 1 in 3 Students Is Industry-Ready</h3>
           
-          <div className="grid grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-3 gap-6 mb-8 slide-up">
             <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-6 text-center">
               <p className="text-sm text-muted-foreground mb-2">Score &lt; 50%</p>
               <p className="text-4xl font-bold text-destructive mb-2">65%</p>

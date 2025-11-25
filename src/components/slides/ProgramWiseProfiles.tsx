@@ -37,7 +37,7 @@ export const ProgramWiseProfiles = () => {
   return (
     <PresentationSlide title="Appendix: Program-wise Skill Profiles">
       <div className="w-full max-w-6xl space-y-8">
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8">
+        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 zoom-in">
           <h3 className="text-3xl font-bold text-primary mb-6">Different Programs, Different Skill Gaps</h3>
           
           <p className="text-lg text-foreground/90 mb-8">

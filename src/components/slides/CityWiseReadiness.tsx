@@ -6,7 +6,7 @@ export const CityWiseReadiness = () => {
   return (
     <PresentationSlide title="Insight #2: City-wise Industry Readiness">
       <div className="w-full max-w-6xl space-y-8">
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8">
+        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 zoom-in">
           <h3 className="text-3xl font-bold text-primary mb-6">Tier-2 Cities Often Match or Beat Metros</h3>
           
           <div className="mb-6 space-y-3">
