@@ -4,7 +4,7 @@ export const ExecutiveSnapshot = () => {
   return (
     <PresentationSlide>
       <div className="max-w-5xl space-y-12">
-        <div className="text-center space-y-6">
+        <div className="text-center space-y-6 zoom-in">
           <h1 className="text-7xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
             Offee PLAT Insight Note
           </h1>
@@ -13,7 +13,7 @@ export const ExecutiveSnapshot = () => {
           </h2>
         </div>
 
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-10 space-y-6">
+        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-10 space-y-6 zoom-in-delayed">
           <h3 className="text-3xl font-bold text-primary mb-6">Executive Snapshot</h3>
           <p className="text-2xl font-semibold text-foreground italic">In One Line: Degrees ≠ Readiness</p>
           

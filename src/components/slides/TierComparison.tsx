@@ -6,7 +6,7 @@ export const TierComparison = () => {
   return (
     <PresentationSlide title="Insight #3: Tier-2/3 vs Tier-1 Problem-Solving">
       <div className="w-full max-w-6xl space-y-8">
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8">
+        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 zoom-in">
           <h3 className="text-3xl font-bold text-primary mb-6">Tier-2/Tier-3 Colleges Hide Serious Problem-Solving Talent</h3>
           
           <div className="grid grid-cols-3 gap-6 mb-8">
