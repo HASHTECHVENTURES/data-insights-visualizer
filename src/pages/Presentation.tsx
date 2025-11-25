@@ -20,47 +20,19 @@ const Presentation = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isExiting, setIsExiting] = useState(false);
   const nextSlide = () => {
     if (currentSlide < slides.length - 1 && !isTransitioning) {
-      setDirection("forward");
-      setIsTransitioning(true);
-      setIsExiting(true);
-      setTimeout(() => {
-        setCurrentSlide(currentSlide + 1);
-        setIsExiting(false);
-      }, 300);
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 650);
+      setCurrentSlide(currentSlide + 1);
     }
   };
   const prevSlide = () => {
     if (currentSlide > 0 && !isTransitioning) {
-      setDirection("backward");
-      setIsTransitioning(true);
-      setIsExiting(true);
-      setTimeout(() => {
-        setCurrentSlide(currentSlide - 1);
-        setIsExiting(false);
-      }, 300);
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 650);
+      setCurrentSlide(currentSlide - 1);
     }
   };
   const goToSlide = (index: number) => {
     if (index !== currentSlide && !isTransitioning) {
-      setDirection(index > currentSlide ? "forward" : "backward");
-      setIsTransitioning(true);
-      setIsExiting(true);
-      setTimeout(() => {
-        setCurrentSlide(index);
-        setIsExiting(false);
-      }, 300);
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 650);
+      setCurrentSlide(index);
     }
   };
   const toggleFullscreen = () => {
@@ -100,19 +72,8 @@ const Presentation = () => {
   }, []);
   const CurrentSlideComponent = slides[currentSlide];
   return <div className="relative w-full h-screen overflow-hidden bg-background" onKeyDown={handleKeyDown} tabIndex={0}>
-      {/* Transition Backdrop */}
-      {isTransitioning && (
-        <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px] z-20 pointer-events-none transition-opacity duration-300" />
-      )}
-      
-      {/* Slide Container with Dramatic Transitions */}
-      <div className={cn(
-        "w-full h-full",
-        isExiting && direction === "forward" && "slide-exit-forward",
-        !isExiting && isTransitioning && direction === "forward" && "slide-enter-forward",
-        isExiting && direction === "backward" && "slide-exit-backward",
-        !isExiting && isTransitioning && direction === "backward" && "slide-enter-backward"
-      )}>
+      {/* Slide Container */}
+      <div className="w-full h-full">
         <CurrentSlideComponent />
       </div>
 
