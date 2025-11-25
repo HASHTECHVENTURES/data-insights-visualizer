@@ -240,6 +240,75 @@ All colors MUST be HSL.
     50% { transform: translateY(-10px); }
   }
 
+  /* Page transition animations */
+  @keyframes slide-exit-forward {
+    0% { 
+      opacity: 1; 
+      transform: scale(1) translateX(0);
+      filter: blur(0px);
+    }
+    100% { 
+      opacity: 0; 
+      transform: scale(0.9) translateX(-100px);
+      filter: blur(4px);
+    }
+  }
+
+  @keyframes slide-enter-forward {
+    0% { 
+      opacity: 0; 
+      transform: scale(1.05) translateX(100px);
+      filter: blur(4px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: scale(1) translateX(0);
+      filter: blur(0px);
+    }
+  }
+
+  @keyframes slide-exit-backward {
+    0% { 
+      opacity: 1; 
+      transform: scale(1) translateX(0);
+      filter: blur(0px);
+    }
+    100% { 
+      opacity: 0; 
+      transform: scale(0.9) translateX(100px);
+      filter: blur(4px);
+    }
+  }
+
+  @keyframes slide-enter-backward {
+    0% { 
+      opacity: 0; 
+      transform: scale(1.05) translateX(-100px);
+      filter: blur(4px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: scale(1) translateX(0);
+      filter: blur(0px);
+    }
+  }
+
+  .slide-exit-forward {
+    animation: slide-exit-forward 300ms cubic-bezier(0.4, 0, 0.6, 1) forwards;
+  }
+
+  .slide-enter-forward {
+    animation: slide-enter-forward 350ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .slide-exit-backward {
+    animation: slide-exit-backward 300ms cubic-bezier(0.4, 0, 0.6, 1) forwards;
+  }
+
+  .slide-enter-backward {
+    animation: slide-enter-backward 350ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
   .chart-glow {
     filter: drop-shadow(0 0 8px hsl(var(--chart-glow) / 0.6)) drop-shadow(0 0 16px hsl(var(--chart-glow) / 0.4));
   }
