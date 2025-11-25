@@ -19,59 +19,61 @@ export const CoverSlide = () => {
         </div>
 
         {/* Main Content - Centered & Clean */}
-        <div className="text-center space-y-10 z-10 relative animate-in fade-in zoom-in duration-1000">
-          <div className="space-y-6">
+        <div className="text-center space-y-6 sm:space-y-10 z-10 relative animate-in fade-in zoom-in duration-1000 px-4 sm:px-6">
+          <div className="space-y-4 sm:space-y-6">
             <div className="inline-block">
-              <span className="bg-primary/10 border border-primary/30 rounded-full px-4 py-1.5 text-sm font-semibold text-primary mb-6 inline-block animate-in slide-in-from-top-4 duration-700 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+              <span className="bg-primary/10 border border-primary/30 rounded-full px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-semibold text-primary mb-4 sm:mb-6 inline-block animate-in slide-in-from-top-4 duration-700 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
                 🚀 National Insight Report 2025
               </span>
             </div>
-            <h1 className="text-7xl font-black leading-tight tracking-tight drop-shadow-2xl">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight drop-shadow-2xl">
               <span className="text-foreground">Offee PLAT</span>
               <br />
               <span className="bg-gradient-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient drop-shadow-lg">Insight Note</span>
             </h1>
-            <h2 className="text-2xl font-medium text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              What <span className="text-foreground font-bold border-b-2 border-primary"><CountUp end={50000} duration={2.5} separator="," />+</span> Assessments Tell Us About <br/>India's Graduate Talent Landscape
+            <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
+              What <span className="text-foreground font-bold border-b-2 border-primary"><CountUp end={50000} duration={2.5} separator="," />+</span> Assessments Tell Us About <br className="hidden sm:block"/>India's Graduate Talent Landscape
             </h2>
           </div>
 
-          <div className="flex items-center justify-center gap-6 mt-12">
-            <div className="group relative bg-card/30 backdrop-blur-md border border-primary/20 rounded-2xl px-8 py-6 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 min-w-[200px] shadow-lg hover:shadow-primary/20">
-              <p className="text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={50000} duration={2} separator="," />+</p>
-              <p className="text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Students</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-12">
+            <div className="group relative bg-card/30 backdrop-blur-md border border-primary/20 rounded-xl sm:rounded-2xl px-6 py-4 sm:px-8 sm:py-6 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 w-[160px] sm:min-w-[180px] md:min-w-[200px] shadow-lg hover:shadow-primary/20">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={50000} duration={2} separator="," />+</p>
+              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Students</p>
             </div>
             
-            <div className="group relative bg-card/30 backdrop-blur-md border border-cyan-500/20 rounded-2xl px-8 py-6 hover:border-cyan-500/50 hover:bg-card/50 transition-all duration-300 min-w-[200px] shadow-lg hover:shadow-cyan-500/20">
-              <p className="text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={10} duration={1.5} /></p>
-              <p className="text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Cities</p>
+            <div className="group relative bg-card/30 backdrop-blur-md border border-cyan-500/20 rounded-xl sm:rounded-2xl px-6 py-4 sm:px-8 sm:py-6 hover:border-cyan-500/50 hover:bg-card/50 transition-all duration-300 w-[160px] sm:min-w-[180px] md:min-w-[200px] shadow-lg hover:shadow-cyan-500/20">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={10} duration={1.5} /></p>
+              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Cities</p>
             </div>
 
-            <div className="group relative bg-card/30 backdrop-blur-md border border-amber-500/20 rounded-2xl px-8 py-6 hover:border-amber-500/50 hover:bg-card/50 transition-all duration-300 min-w-[200px] shadow-lg hover:shadow-amber-500/20">
-              <p className="text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={18} duration={1.5} />+</p>
-              <p className="text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Universities</p>
+            <div className="group relative bg-card/30 backdrop-blur-md border border-amber-500/20 rounded-xl sm:rounded-2xl px-6 py-4 sm:px-8 sm:py-6 hover:border-amber-500/50 hover:bg-card/50 transition-all duration-300 w-[160px] sm:min-w-[180px] md:min-w-[200px] shadow-lg hover:shadow-amber-500/20">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={18} duration={1.5} />+</p>
+              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Universities</p>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="absolute bottom-8 left-0 right-0 text-center z-10 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
-          <div className="inline-flex items-center gap-3 bg-background/30 backdrop-blur-sm border border-white/10 rounded-full px-6 py-2 shadow-lg">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse box-shadow-[0_0_8px_rgba(34,197,94,0.8)]" />
-            <p className="text-sm font-semibold text-foreground">Building India's Talent Grid</p>
-            <span className="text-muted-foreground">|</span>
-            <p className="text-xs text-muted-foreground">
+        <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 text-center z-10 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500 px-4">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-background/30 backdrop-blur-sm border border-white/10 rounded-full px-4 sm:px-6 py-2 shadow-lg">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse box-shadow-[0_0_8px_rgba(34,197,94,0.8)]" />
+              <p className="text-xs sm:text-sm font-semibold text-foreground">Building India's Talent Grid</p>
+            </div>
+            <span className="hidden sm:inline text-muted-foreground">|</span>
+            <p className="text-[10px] sm:text-xs text-muted-foreground text-center">
               Data from 50,000+ students • 10 cities • Multiple universities
             </p>
           </div>
         </div>
 
         {/* Offee Logo - Top Left */}
-        <div className="absolute top-8 left-8 z-10">
+        <div className="absolute top-4 sm:top-8 left-4 sm:left-8 z-10">
           <img 
             src={offeeLogoImage} 
             alt="Offee Logo" 
-            className="h-12 w-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-300"
+            className="h-8 sm:h-10 md:h-12 w-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-300"
           />
         </div>
       </div>

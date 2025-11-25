@@ -123,11 +123,11 @@ const Presentation = () => {
         onClick={prevSlide}
         disabled={currentSlide === 0 || isTransitioning}
         className={cn(
-          "absolute left-8 top-1/2 -translate-y-1/2 z-30 rounded-full h-14 w-14 bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/60 hover:scale-110 transition-all duration-200 shadow-[0_0_20px_rgba(59,130,246,0.2)]",
+          "absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 rounded-full h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/60 hover:scale-110 transition-all duration-200 shadow-[0_0_20px_rgba(59,130,246,0.2)]",
           (currentSlide === 0 || isTransitioning) && "opacity-30 cursor-not-allowed"
         )}
       >
-        <ChevronLeft className="h-8 w-8 text-primary" />
+        <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-primary" />
       </Button>
 
       {/* Right Navigation Arrow */}
@@ -137,16 +137,16 @@ const Presentation = () => {
         onClick={nextSlide}
         disabled={currentSlide === slides.length - 1 || isTransitioning}
         className={cn(
-          "absolute right-8 top-1/2 -translate-y-1/2 z-30 rounded-full h-14 w-14 bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/60 hover:scale-110 transition-all duration-200 shadow-[0_0_20px_rgba(59,130,246,0.2)]",
+          "absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 rounded-full h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 bg-card/40 backdrop-blur-sm border border-border/50 hover:bg-card/60 hover:scale-110 transition-all duration-200 shadow-[0_0_20px_rgba(59,130,246,0.2)]",
           (currentSlide === slides.length - 1 || isTransitioning) && "opacity-30 cursor-not-allowed"
         )}
       >
-        <ChevronRight className="h-8 w-8 text-primary" />
+        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-primary" />
       </Button>
 
       {/* Minimal Slide Indicator - Only dots, hidden by default, show on hover */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-30 opacity-0 hover:opacity-100 transition-opacity duration-300">
-        {slides.map((_, index) => <button key={index} onClick={() => goToSlide(index)} disabled={isTransitioning} className={cn("rounded-full transition-all", index === currentSlide ? "bg-primary w-8 h-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]" : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2 h-2")} title={`Go to slide ${index + 1}`} />)}
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex gap-1.5 sm:gap-2 z-30 opacity-0 hover:opacity-100 transition-opacity duration-300">
+        {slides.map((_, index) => <button key={index} onClick={() => goToSlide(index)} disabled={isTransitioning} className={cn("rounded-full transition-all", index === currentSlide ? "bg-primary w-6 sm:w-8 h-1.5 sm:h-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]" : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-1.5 sm:w-2 h-1.5 sm:h-2")} title={`Go to slide ${index + 1}`} />)}
       </div>
     </div>;
 };
