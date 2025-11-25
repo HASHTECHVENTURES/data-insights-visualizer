@@ -19,10 +19,10 @@ export const CoverSlide = () => {
         </div>
 
         {/* Main Content - Centered & Clean */}
-        <div className="text-center space-y-6 sm:space-y-10 z-10 relative animate-in fade-in zoom-in duration-1000 px-4 sm:px-6">
+        <div className="text-center space-y-6 sm:space-y-10 z-10 relative px-4 sm:px-6">
           <div className="space-y-4 sm:space-y-6">
             <div className="inline-block">
-              <span className="bg-primary/10 border border-primary/30 rounded-full px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-semibold text-primary mb-4 sm:mb-6 inline-block animate-in slide-in-from-top-4 duration-700 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+              <span className="bg-primary/10 border border-primary/30 rounded-full px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-semibold text-primary mb-4 sm:mb-6 inline-block shadow-[0_0_15px_rgba(59,130,246,0.3)]">
                 🚀 National Insight Report 2025
               </span>
             </div>
@@ -55,7 +55,7 @@ export const CoverSlide = () => {
         </div>
 
         {/* Footer */}
-        <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 text-center z-10 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500 px-4">
+        <div className="absolute bottom-4 sm:bottom-8 left-0 right-0 text-center z-10 px-4">
           <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-background/30 backdrop-blur-sm border border-white/10 rounded-full px-4 sm:px-6 py-2 shadow-lg">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse box-shadow-[0_0_8px_rgba(34,197,94,0.8)]" />
