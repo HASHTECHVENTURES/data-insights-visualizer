@@ -4,39 +4,23 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { StickyNote, X } from "lucide-react";
 import { presenterNotes } from "@/data/presenterNotes";
 import { cn } from "@/lib/utils";
-
 interface PresenterNotesProps {
   currentSlide: number;
 }
-
-export const PresenterNotes = ({ currentSlide }: PresenterNotesProps) => {
+export const PresenterNotes = ({
+  currentSlide
+}: PresenterNotesProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const notes = presenterNotes.find((n) => n.slideIndex === currentSlide);
-
+  const notes = presenterNotes.find(n => n.slideIndex === currentSlide);
   if (!notes) return null;
-
-  return (
-    <>
+  return <>
       {/* Toggle Button */}
-      <Button
-        onClick={() => setIsOpen(!isOpen)}
-        className={cn(
-          "fixed top-8 left-8 z-50 rounded-full shadow-lg transition-all",
-          isOpen && "bg-primary"
-        )}
-        size="icon"
-        variant={isOpen ? "default" : "outline"}
-      >
+      <Button onClick={() => setIsOpen(!isOpen)} className={cn("fixed top-8 left-8 z-50 rounded-full shadow-lg transition-all", isOpen && "bg-primary")} size="icon" variant={isOpen ? "default" : "outline"}>
         {isOpen ? <X className="h-5 w-5" /> : <StickyNote className="h-5 w-5" />}
       </Button>
 
       {/* Notes Panel */}
-      <div
-        className={cn(
-          "fixed top-0 left-0 h-screen w-96 bg-card/95 backdrop-blur-lg border-r border-border shadow-2xl z-40 transition-transform duration-300",
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        )}
-      >
+      <div className={cn("fixed top-0 left-0 h-screen w-96 bg-card/95 backdrop-blur-lg border-r border-border shadow-2xl z-40 transition-transform duration-300", isOpen ? "translate-x-0" : "-translate-x-full")}>
         <div className="p-6 h-full flex flex-col">
           <div className="mb-6">
             <h3 className="text-2xl font-bold text-primary mb-2">Presenter Notes</h3>
@@ -54,12 +38,10 @@ export const PresenterNotes = ({ currentSlide }: PresenterNotesProps) => {
                   Speaking Points
                 </h4>
                 <ul className="space-y-2">
-                  {notes.notes.map((note, index) => (
-                    <li key={index} className="text-sm text-foreground/90 flex gap-2">
+                  {notes.notes.map((note, index) => <li key={index} className="text-sm text-foreground/90 flex gap-2">
                       <span className="text-primary mt-1">•</span>
                       <span>{note}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
@@ -70,18 +52,18 @@ export const PresenterNotes = ({ currentSlide }: PresenterNotesProps) => {
                   Key Talking Points
                 </h4>
                 <ul className="space-y-2">
-                  {notes.keyTalkingPoints.map((point, index) => (
-                    <li key={index} className="text-sm text-foreground/90 flex gap-2">
+                  {notes.keyTalkingPoints.map((point, index) => <li key={index} className="text-sm text-foreground/90 flex gap-2">
                       <span className="text-chart-1 mt-1">▸</span>
                       <span className="font-medium">{point}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </div>
 
               {/* Timer/Tips Section */}
               <div className="bg-chart-2/5 border border-chart-2/20 rounded-lg p-4">
-                <h4 className="text-sm font-semibold mb-2" style={{ color: "hsl(var(--chart-2))" }}>
+                <h4 className="text-sm font-semibold mb-2" style={{
+                color: "hsl(var(--chart-2))"
+              }}>
                   💡 Presentation Tips
                 </h4>
                 <ul className="space-y-1 text-xs text-foreground/80">
@@ -95,6 +77,5 @@ export const PresenterNotes = ({ currentSlide }: PresenterNotesProps) => {
           </ScrollArea>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
