@@ -10,7 +10,7 @@ interface PresentationSlideProps {
 
 export const PresentationSlide = ({ children, className, title, subtitle }: PresentationSlideProps) => {
   return (
-    <div className={cn("w-full h-screen flex flex-col p-12 bg-gradient-to-br from-background via-background to-primary/10", className)}>
+    <div className={cn("w-full h-screen flex flex-col px-24 py-12 bg-gradient-to-br from-background via-background to-primary/10", className)}>
       {(title || subtitle) && (
         <div className="mb-8 animate-fade-in">
           {title && <h1 className="text-5xl font-bold text-foreground mb-4 drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]">{title}</h1>}
