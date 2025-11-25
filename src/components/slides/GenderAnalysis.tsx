@@ -1,99 +1,116 @@
 import { PresentationSlide } from "../PresentationSlide";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import { genderComparison } from "@/data/collegeData";
+import CountUp from "react-countup";
 
 export const GenderAnalysis = () => {
   return (
-    <PresentationSlide title="Insight #6: Gender Performance Analysis">
-      <div className="w-full max-w-6xl space-y-8">
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 zoom-in">
-          <h3 className="text-3xl font-bold text-primary mb-6">Women Often Score Higher, Still Hired Less</h3>
-          
-          <div className="grid grid-cols-3 gap-6 mb-8">
-            <div className="col-span-2 space-y-3">
-              <p className="text-lg text-foreground/90 mb-4">
-                Where gender mix is balanced, female students:
-              </p>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2" />
-                <p className="text-foreground/90">
-                  <strong className="text-primary">Match or slightly exceed</strong> male students on Overall PLAT Score
-                </p>
+    <PresentationSlide title="Insight #6: Women Often Score Higher, Still Hired Less">
+      <div className="w-full h-full max-w-7xl overflow-hidden relative">
+        {/* Decorative background */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500 rounded-full blur-[120px]" />
+        </div>
+
+        <div className="relative bg-gradient-to-br from-card/80 via-card/60 to-card/80 backdrop-blur-sm border-2 border-border/50 rounded-3xl p-6 h-full overflow-hidden flex flex-col gap-4 shadow-2xl">
+          <div className="flex items-start justify-between flex-shrink-0 animate-in fade-in slide-in-from-top-4 duration-700">
+            <h3 className="text-2xl font-black tracking-tight">
+              <span className="bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">
+                Women Often Score Higher, Still Hired Less
+              </span>
+            </h3>
+            <div className="flex gap-3">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-pink-500/25 to-pink-500/10 border-2 border-pink-500/50 rounded-2xl px-5 py-3 text-center hover:scale-105 transition-all duration-300">
+                  <p className="text-3xl font-black text-white drop-shadow-md mb-1">
+                    +<CountUp end={8} duration={2} />pts
+                  </p>
+                  <p className="text-xs text-pink-100 font-bold tracking-wider uppercase">Female Advantage</p>
+                </div>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-chart-2 mt-2" />
-                <p className="text-foreground/90">
-                  Score <strong style={{ color: "hsl(var(--chart-2))" }}>5–10 points higher</strong> on communication, collaboration and discipline, on average
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-destructive mt-2" />
-                <p className="text-foreground/90">
-                  Despite this, their <strong className="text-destructive">share in recruiter shortlists is lower</strong> than what their PLAT performance justifies
-                </p>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="bg-chart-2/10 border border-chart-2/30 rounded-lg p-4">
-                <p className="text-sm font-semibold mb-2" style={{ color: "hsl(var(--chart-2))" }}>Female Advantage</p>
-                <p className="text-3xl font-bold text-foreground">+8pts</p>
-                <p className="text-xs text-muted-foreground">Communication & Collaboration</p>
-              </div>
-              <div className="bg-destructive/10 border border-destructive/30 rounded-lg p-4">
-                <p className="text-sm font-semibold text-destructive mb-2">Hiring Gap</p>
-                <p className="text-sm text-foreground">Lower representation in shortlists despite higher scores</p>
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-destructive to-red-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-destructive/25 to-destructive/10 border-2 border-destructive/50 rounded-2xl px-5 py-3 text-center hover:scale-105 transition-all duration-300">
+                  <p className="text-2xl font-black text-white drop-shadow-md mb-1">Gap</p>
+                  <p className="text-xs text-red-100 font-bold tracking-wider uppercase">Lower Hiring</p>
+                </div>
               </div>
             </div>
           </div>
+          
+          <div className="grid grid-cols-4 gap-3 flex-shrink-0">
+            <div className="group flex items-start gap-3 bg-gradient-to-br from-primary/15 to-primary/5 p-3 rounded-xl hover:from-primary/25 hover:to-primary/10 transition-all duration-300 border-2 border-primary/30 hover:border-primary/50 hover:scale-105">
+              <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-cyan-500 mt-1 animate-pulse" />
+              <p className="text-foreground font-medium text-xs">
+                <strong className="text-primary">Match or exceed</strong> male students on Overall PLAT
+              </p>
+            </div>
+            <div className="group flex items-start gap-3 bg-gradient-to-br from-pink-500/15 to-pink-500/5 p-3 rounded-xl hover:from-pink-500/25 hover:to-pink-500/10 transition-all duration-300 border-2 border-pink-500/30 hover:border-pink-500/50 hover:scale-105">
+              <div className="w-3 h-3 rounded-full bg-pink-500 mt-1 animate-pulse" />
+              <p className="text-foreground font-medium text-xs">
+                Score <strong className="text-pink-500">5–10 pts higher</strong> on communication
+              </p>
+            </div>
+            <div className="group flex items-start gap-3 bg-gradient-to-br from-destructive/15 to-destructive/5 p-3 rounded-xl hover:from-destructive/25 hover:to-destructive/10 transition-all duration-300 border-2 border-destructive/30 hover:border-destructive/50 hover:scale-105">
+              <div className="w-3 h-3 rounded-full bg-destructive mt-1 animate-pulse" />
+              <p className="text-foreground font-medium text-xs">
+                <strong className="text-destructive">Lower shortlist share</strong> despite higher scores
+              </p>
+            </div>
+            <div className="group flex items-start gap-3 bg-gradient-to-br from-green-500/15 to-green-500/5 p-3 rounded-xl hover:from-green-500/25 hover:to-green-500/10 transition-all duration-300 border-2 border-green-500/30 hover:border-green-500/50 hover:scale-105">
+              <div className="w-3 h-3 rounded-full bg-green-500 mt-1 animate-pulse" />
+              <p className="text-foreground font-medium text-xs">
+                <strong className="text-green-500">Untapped potential</strong> in female talent
+              </p>
+            </div>
+          </div>
 
-          <div className="h-96">
+          {/* Full Width Chart - Better height management */}
+          <div className="flex-1 min-h-0">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={genderComparison}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                <XAxis 
-                  dataKey="skill" 
-                  stroke="hsl(var(--muted-foreground))"
-                  tick={{ fill: 'hsl(var(--foreground))' }}
-                />
-                <YAxis 
-                  stroke="hsl(var(--muted-foreground))"
-                  tick={{ fill: 'hsl(var(--foreground))' }}
-                  label={{ value: 'Average Score', angle: -90, position: 'insideLeft', fill: 'hsl(var(--foreground))' }}
-                  domain={[0, 100]}
-                />
+              <BarChart data={genderComparison} barCategoryGap="25%">
+                <XAxis dataKey="skill" tick={{ fill: '#f1f5f9', fontSize: 12 }} />
+                <YAxis tick={{ fill: '#94a3b8', fontSize: 11 }} domain={[0, 70]} />
                 <Tooltip 
-                  contentStyle={{ 
-                    backgroundColor: 'hsl(var(--card))', 
-                    border: '1px solid hsl(var(--border))',
-                    borderRadius: '8px'
-                  }}
+                  contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155', borderRadius: '8px', color: '#f1f5f9' }}
+                  itemStyle={{ color: '#f1f5f9' }}
+                  cursor={{ fill: 'rgba(59,130,246,0.1)' }}
                 />
-                <Legend />
+                <Legend wrapperStyle={{ paddingTop: '10px' }} />
                 <Bar 
                   dataKey="male" 
                   name="Male Students" 
-                  fill="hsl(var(--chart-1))" 
-                  radius={[8, 8, 0, 0]}
+                  fill="#06b6d4" 
+                  radius={[4, 4, 0, 0]}
+                  animationDuration={800}
+                  style={{ filter: 'drop-shadow(0 0 6px #06b6d4)', cursor: 'pointer' }}
                 />
                 <Bar 
                   dataKey="female" 
                   name="Female Students" 
-                  fill="hsl(var(--chart-2))" 
-                  radius={[8, 8, 0, 0]}
+                  fill="#ec4899" 
+                  radius={[4, 4, 0, 0]}
+                  animationDuration={800}
+                  animationBegin={200}
+                  style={{ filter: 'drop-shadow(0 0 6px #ec4899)', cursor: 'pointer' }}
                 />
               </BarChart>
             </ResponsiveContainer>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-4">
-            <div className="bg-chart-2/5 border border-chart-2/20 rounded-lg p-4">
-              <p className="text-sm text-foreground/80">
-                <strong style={{ color: "hsl(var(--chart-2))" }}>Data-backed diversity:</strong> PLAT data enables universities and employers to run evidence-based diversity programs, not tokenism.
+          <div className="grid grid-cols-2 gap-3 flex-shrink-0 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <div className="relative overflow-hidden bg-gradient-to-br from-pink-500/15 to-pink-500/5 border-2 border-pink-500/40 rounded-2xl p-4 hover:border-pink-500/60 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-pink-500/20 rounded-full blur-2xl" />
+              <p className="text-sm text-foreground font-medium relative z-10">
+                <strong className="text-pink-500 font-black text-base">Data-backed diversity:</strong> Evidence-based diversity programs, not tokenism.
               </p>
             </div>
-            <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
-              <p className="text-sm text-foreground/80">
-                <strong className="text-primary">Untapped potential:</strong> Female talent shows exceptional communication and collaboration skills – key for modern workplaces.
+            <div className="relative overflow-hidden bg-gradient-to-br from-cyan-500/15 to-cyan-500/5 border-2 border-cyan-500/40 rounded-2xl p-4 hover:border-cyan-500/60 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-cyan-500/20 rounded-full blur-2xl" />
+              <p className="text-sm text-foreground font-medium relative z-10">
+                <strong className="text-cyan-500 font-black text-base">Untapped potential:</strong> Exceptional communication and collaboration skills.
               </p>
             </div>
           </div>

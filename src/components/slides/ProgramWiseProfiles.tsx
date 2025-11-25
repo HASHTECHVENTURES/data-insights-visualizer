@@ -35,103 +35,116 @@ export const ProgramWiseProfiles = () => {
   ];
 
   return (
-    <PresentationSlide title="Appendix: Program-wise Skill Profiles">
-      <div className="w-full max-w-6xl space-y-8">
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 zoom-in">
-          <h3 className="text-3xl font-bold text-primary mb-6">Different Programs, Different Skill Gaps</h3>
-          
-          <p className="text-lg text-foreground/90 mb-8">
-            Different degrees show different strengths and gaps across pillars. This allows <strong className="text-primary">program-specific interventions</strong> instead of one-size-fits-all training.
+    <PresentationSlide title="Appendix: Different Programs, Different Skill Gaps">
+      <div className="w-full h-full max-w-7xl overflow-hidden relative">
+        {/* Decorative background */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-cyan-500 rounded-full blur-[120px]" />
+        </div>
+
+        <div className="relative bg-gradient-to-br from-card/80 via-card/60 to-card/80 backdrop-blur-sm border-2 border-border/50 rounded-3xl p-6 h-full overflow-hidden flex flex-col gap-4 shadow-2xl">
+          <p className="text-base text-foreground font-medium flex-shrink-0 bg-gradient-to-r from-primary/10 to-cyan-500/10 rounded-2xl p-4 border-2 border-primary/30 animate-in fade-in slide-in-from-top-4 duration-700">
+            Different degrees show different strengths and gaps across pillars. This allows <strong className="text-primary font-bold">program-specific interventions</strong> instead of one-size-fits-all training.
           </p>
 
-          <div className="grid grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-xl font-semibold text-primary mb-4">Skill Profile by Program</h4>
-              <div className="h-96">
+          <div className="grid grid-cols-2 gap-5 flex-1 min-h-0">
+            <div className="min-h-0 flex flex-col animate-in fade-in slide-in-from-left-4 duration-700 delay-100">
+              <h4 className="text-lg font-black text-primary mb-3 flex-shrink-0">Skill Profile by Program</h4>
+              <div className="flex-1 min-h-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl p-4 border border-primary/20">
                 <ResponsiveContainer width="100%" height="100%">
-                  <RadarChart data={radarData}>
-                    <PolarGrid stroke="hsl(var(--border))" />
+                  <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="65%">
+                    <PolarGrid stroke="hsl(var(--border))" strokeWidth={1.5} />
                     <PolarAngleAxis 
                       dataKey="skill" 
-                      tick={{ fill: 'hsl(var(--foreground))', fontSize: 12 }}
+                      tick={{ fill: 'hsl(var(--foreground))', fontSize: 12, fontWeight: 600 }}
+                      tickLine={false}
+                      dy={5}
                     />
                     <PolarRadiusAxis 
                       angle={90} 
                       domain={[0, 100]}
-                      tick={{ fill: 'hsl(var(--muted-foreground))' }}
+                      tick={false}
+                      axisLine={false}
                     />
                     <Radar 
                       name="B.Com" 
                       dataKey="B.Com" 
                       stroke="hsl(var(--chart-1))" 
                       fill="hsl(var(--chart-1))" 
-                      fillOpacity={0.2}
-                      strokeWidth={2}
+                      fillOpacity={0.3}
+                      strokeWidth={3}
                     />
                     <Radar 
                       name="BMS" 
                       dataKey="BMS" 
                       stroke="hsl(var(--chart-2))" 
                       fill="hsl(var(--chart-2))" 
-                      fillOpacity={0.2}
-                      strokeWidth={2}
+                      fillOpacity={0.3}
+                      strokeWidth={3}
                     />
                     <Radar 
                       name="B.Sc IT" 
                       dataKey="B.Sc IT" 
                       stroke="hsl(var(--primary))" 
                       fill="hsl(var(--primary))" 
-                      fillOpacity={0.2}
-                      strokeWidth={2}
+                      fillOpacity={0.3}
+                      strokeWidth={3}
                     />
                     <Radar 
                       name="Engineering" 
                       dataKey="Engineering" 
                       stroke="hsl(var(--chart-3))" 
                       fill="hsl(var(--chart-3))" 
-                      fillOpacity={0.2}
-                      strokeWidth={2}
+                      fillOpacity={0.3}
+                      strokeWidth={3}
                     />
-                    <Legend />
+                    <Legend wrapperStyle={{ fontWeight: 600 }} />
                     <Tooltip 
                       contentStyle={{ 
-                        backgroundColor: 'hsl(var(--card))', 
-                        border: '1px solid hsl(var(--border))',
-                        borderRadius: '8px'
+                        backgroundColor: '#1e293b', 
+                        border: '2px solid #334155',
+                        borderRadius: '12px',
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
+                        color: '#f1f5f9'
                       }}
+                      labelStyle={{ color: '#f1f5f9', fontWeight: 'bold' }}
+                      itemStyle={{ color: '#f1f5f9' }}
                     />
                   </RadarChart>
                 </ResponsiveContainer>
               </div>
             </div>
 
-            <div>
-              <h4 className="text-xl font-semibold text-primary mb-4">Top Departments by Student Count</h4>
-              <div className="space-y-2 max-h-96 overflow-y-auto">
+            <div className="min-h-0 overflow-hidden flex flex-col animate-in fade-in slide-in-from-right-4 duration-700 delay-200">
+              <h4 className="text-lg font-black text-primary mb-3 flex-shrink-0">Top Departments by Student Count</h4>
+              <div className="space-y-2 flex-1 overflow-y-auto pr-2 custom-scrollbar">
                 {topDepartments.map((dept, index) => (
                   <div 
                     key={dept.department}
-                    className="flex items-center justify-between bg-muted/30 rounded-lg p-3 hover-scale"
+                    className="group flex items-center justify-between bg-gradient-to-r from-muted/40 to-muted/20 rounded-xl p-3 hover:from-primary/20 hover:to-primary/10 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/40 hover:scale-105"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl font-bold text-primary/50">#{index + 1}</span>
-                      <span className="font-medium text-foreground">{dept.department}</span>
+                      <span className="text-sm font-black text-primary/50 group-hover:text-primary transition-colors min-w-[2rem]">#{index + 1}</span>
+                      <span className="text-sm font-semibold text-foreground">{dept.department}</span>
                     </div>
-                    <span className="text-lg font-bold text-primary">{dept.students.toLocaleString()}</span>
+                    <span className="text-base font-black text-primary">{dept.students.toLocaleString()}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-6">
-            <div className="bg-chart-1/5 border border-chart-1/20 rounded-lg p-4">
-              <p className="text-sm font-semibold mb-2" style={{ color: "hsl(var(--chart-1))" }}>B.Com / BMS</p>
-              <p className="text-sm text-foreground/80">Stronger communication & collaboration, weaker analytical reasoning</p>
+          <div className="grid grid-cols-2 gap-4 flex-shrink-0 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <div className="relative overflow-hidden bg-gradient-to-br from-cyan-500/15 to-cyan-500/5 border-2 border-cyan-500/40 rounded-2xl p-4 hover:border-cyan-500/60 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-cyan-500/20 rounded-full blur-2xl" />
+              <p className="text-base font-black text-cyan-500 mb-2 relative z-10">B.Com / BMS</p>
+              <p className="text-sm text-foreground font-medium relative z-10">Stronger communication & collaboration, weaker analytical</p>
             </div>
-            <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
-              <p className="text-sm font-semibold text-primary mb-2">B.Sc IT / Engineering</p>
-              <p className="text-sm text-foreground/80">Higher in problem-solving & analytical, lower in communication</p>
+            <div className="relative overflow-hidden bg-gradient-to-br from-primary/15 to-primary/5 border-2 border-primary/40 rounded-2xl p-4 hover:border-primary/60 transition-all duration-300">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-primary/20 rounded-full blur-2xl" />
+              <p className="text-base font-black text-primary mb-2 relative z-10">B.Sc IT / Engineering</p>
+              <p className="text-sm text-foreground font-medium relative z-10">Higher problem-solving & analytical, lower communication</p>
             </div>
           </div>
         </div>

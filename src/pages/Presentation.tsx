@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
+import { CoverSlide } from "@/components/slides/CoverSlide";
 import { ExecutiveSnapshot } from "@/components/slides/ExecutiveSnapshot";
 import { DatasetSlide } from "@/components/slides/DatasetSlide";
 import { ReadinessDistribution } from "@/components/slides/ReadinessDistribution";
@@ -13,7 +14,7 @@ import { TalentGrid } from "@/components/slides/TalentGrid";
 import { ProgramWiseProfiles } from "@/components/slides/ProgramWiseProfiles";
 import { PresenterNotes } from "@/components/PresenterNotes";
 import { cn } from "@/lib/utils";
-const slides = [ExecutiveSnapshot, DatasetSlide, ReadinessDistribution, CityWiseReadiness, TierComparison, CommunicationGap, ConsistentGrowth, GenderAnalysis, TalentGrid, ProgramWiseProfiles];
+const slides = [CoverSlide, ExecutiveSnapshot, DatasetSlide, ReadinessDistribution, CityWiseReadiness, TierComparison, CommunicationGap, ConsistentGrowth, GenderAnalysis, TalentGrid, ProgramWiseProfiles];
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
