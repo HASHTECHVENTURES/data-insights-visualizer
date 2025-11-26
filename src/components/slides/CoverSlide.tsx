@@ -45,7 +45,7 @@ export const CoverSlide = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-12">
             <div className="group relative bg-card/30 backdrop-blur-md border border-primary/20 rounded-xl sm:rounded-2xl px-4 py-4 sm:px-8 sm:py-6 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 w-[200px] sm:min-w-[200px] md:min-w-[220px] shadow-lg hover:shadow-primary/20 text-center overflow-hidden">
-              <p className="text-2xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1">
+              <p className="text-2xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1 whitespace-nowrap">
                 <CountUp end={50000} duration={2} separator="," />+
               </p>
               <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
@@ -63,7 +63,7 @@ export const CoverSlide = () => {
             </div>
 
             <div className="group relative bg-card/30 backdrop-blur-md border border-amber-500/20 rounded-xl sm:rounded-2xl px-4 py-4 sm:px-8 sm:py-6 hover:border-amber-500/50 hover:bg-card/50 transition-all duration-300 w-[200px] sm:min-w-[200px] md:min-w-[220px] shadow-lg hover:shadow-amber-500/20 text-center overflow-hidden">
-              <p className="text-2xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1">
+              <p className="text-2xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1 whitespace-nowrap">
                 <CountUp end={100} duration={1.5} />+
               </p>
               <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
