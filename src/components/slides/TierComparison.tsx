@@ -20,13 +20,25 @@ export const TierComparison = () => {
                 Tier-2/Tier-3 Colleges Hide Serious Problem-Solving Talent
               </span>
             </h3>
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-cyan-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity" />
-              <div className="relative bg-gradient-to-br from-primary/20 to-cyan-500/20 border-2 border-primary/50 rounded-2xl px-6 py-3 text-center backdrop-blur-sm">
-                <p className="text-4xl font-black text-white mb-1 drop-shadow-md">
-                  <CountUp end={40} duration={2} suffix="%" />
-                </p>
-                <p className="text-xs text-cyan-100 font-bold">cities show Tier-2/3 advantage</p>
+            <div className="space-y-3">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-cyan-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-primary/20 to-cyan-500/20 border-2 border-primary/50 rounded-2xl px-6 py-3 text-center backdrop-blur-sm">
+                  <p className="text-xs text-cyan-100 font-bold mb-1">Top Performer: Bangalore</p>
+                  <p className="text-4xl font-black text-white mb-1 drop-shadow-md">
+                    <CountUp end={48.33} duration={2} suffix="%" decimals={2} />
+                  </p>
+                  <p className="text-xs text-cyan-100 font-bold">% of students with PLAT score</p>
+                </div>
+              </div>
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-destructive to-red-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity" />
+                <div className="relative bg-gradient-to-br from-destructive/20 to-destructive/10 border-2 border-destructive/50 rounded-2xl px-6 py-3 text-center backdrop-blur-sm">
+                  <p className="text-4xl font-black text-white mb-1 drop-shadow-md">
+                    <CountUp end={88} duration={2} suffix="%" />
+                  </p>
+                  <p className="text-xs text-red-100 font-bold">Below threshold</p>
+                </div>
               </div>
             </div>
           </div>
@@ -35,7 +47,7 @@ export const TierComparison = () => {
             <div className="group flex items-start gap-3 bg-gradient-to-br from-primary/15 to-primary/5 p-3 rounded-xl hover:from-primary/25 hover:to-primary/10 transition-all duration-300 border-2 border-primary/30 hover:border-primary/50 hover:scale-105">
               <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-cyan-500 mt-1 animate-pulse" />
               <p className="text-foreground font-medium text-xs">
-                In <strong className="text-primary">4 out of 10 cities</strong>, Tier-2/3 problem-solving scores are higher than Tier-1
+                In <strong className="text-primary">4 out of 22* cities</strong>, Tier-2/3 problem-solving scores are higher than Tier-1
               </p>
             </div>
             <div className="group flex items-start gap-3 bg-gradient-to-br from-destructive/15 to-destructive/5 p-3 rounded-xl hover:from-destructive/25 hover:to-destructive/10 transition-all duration-300 border-2 border-destructive/30 hover:border-destructive/50 hover:scale-105">

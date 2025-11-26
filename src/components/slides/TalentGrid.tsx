@@ -28,7 +28,7 @@ export const TalentGrid = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-cyan-500 animate-pulse" />
-                  <span className="text-foreground font-medium"><strong className="text-primary"><CountUp end={10} duration={1.5} /> cities</strong>, multiple programs</span>
+                  <span className="text-foreground font-medium"><strong className="text-primary"><CountUp end={22} duration={1.5} /> cities</strong>, multiple programs</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-cyan-500 animate-pulse" />

@@ -28,7 +28,7 @@ export const CommunicationGap = () => {
             {/* Left - Key Points */}
             <div className="col-span-2 space-y-3 animate-in fade-in slide-in-from-left-4 duration-700">
               <p className="text-sm text-foreground font-medium bg-gradient-to-r from-destructive/10 to-transparent rounded-lg p-3 border border-destructive/30">
-                In the <strong className="text-destructive font-bold">Below Industry Level</strong> band (PLAT Overall &lt; 50):
+                In the <strong className="text-destructive font-bold">Below Industry Level</strong> band (PLAT Overall &lt; 60):
               </p>
               <div className="space-y-2">
                 <div className="group flex items-start gap-3 bg-gradient-to-br from-destructive/15 to-destructive/5 p-3 rounded-xl hover:from-destructive/25 hover:to-destructive/10 transition-all duration-300 border-2 border-destructive/30 hover:border-destructive/50 hover:scale-105">
