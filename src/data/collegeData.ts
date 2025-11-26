@@ -31,9 +31,9 @@ export const cityWiseData = [
 ];
 
 export const skillDistribution = [
-  { band: "Below Industry (<50)", percentage: 65, count: 32500 },
-  { band: "Industry Ready (50-90)", percentage: 30, count: 15000 },
-  { band: "High Potential (>90)", percentage: 5, count: 2500 },
+  { band: "Below Industry (<60)", percentage: 79.96, count: 39980 },
+  { band: "Industry Ready (60-90)", percentage: 20.01, count: 10005 },
+  { band: "High Potential (>90)", percentage: 0.03, count: 15 },
 ];
 
 export const communicationVsProblemSolving = [
