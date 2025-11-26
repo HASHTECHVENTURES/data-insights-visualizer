@@ -41,12 +41,12 @@ export const ExecutiveSnapshot = () => {
           <div className="space-y-3">
             <div className="group relative flex gap-4 bg-gradient-to-br from-destructive/15 to-destructive/5 border-2 border-destructive/40 rounded-2xl p-5 hover:border-destructive/60 hover:shadow-lg hover:shadow-destructive/20 transition-all duration-300 hover:scale-[1.02] animate-in fade-in slide-in-from-left-4 duration-700">
               <div className="flex items-center justify-center min-w-[80px] h-20 rounded-xl bg-destructive/20 border border-destructive/30 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-4xl font-black text-destructive">35%</div>
+                <div className="text-4xl font-black text-destructive">20%</div>
               </div>
               <div className="flex flex-col justify-center">
                 <p className="font-bold text-foreground text-lg mb-1">Industry Ready</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Only ~28–35% of final-year students meet industry-ready benchmarks
+                  Only ~20% of final-year students meet industry-ready benchmarks
                 </p>
               </div>
             </div>

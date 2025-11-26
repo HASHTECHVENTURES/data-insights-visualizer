@@ -40,7 +40,7 @@ export const DatasetSlide = () => {
             <div className="group relative overflow-hidden bg-gradient-to-br from-green-500/20 to-green-500/5 border-2 border-green-500/40 rounded-2xl p-5 text-center hover:border-green-500/60 hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <p className="text-4xl font-black text-green-500 relative z-10 mb-2">
-                <CountUp end={10} duration={1.5} />
+                <CountUp end={22} duration={1.5} />
               </p>
               <p className="text-xs text-muted-foreground font-semibold tracking-wider uppercase relative z-10">Cities Covered</p>
             </div>

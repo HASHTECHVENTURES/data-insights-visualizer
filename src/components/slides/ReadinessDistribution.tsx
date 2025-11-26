@@ -21,7 +21,7 @@ export const ReadinessDistribution = () => {
 
         <div className="relative bg-gradient-to-br from-card/80 via-card/60 to-card/80 backdrop-blur-sm border-2 border-border/50 rounded-3xl p-6 h-full overflow-hidden flex flex-col gap-6 shadow-2xl">
           <p className="text-base text-foreground font-medium flex-shrink-0 bg-gradient-to-r from-primary/10 to-cyan-500/10 rounded-2xl p-4 border border-primary/30">
-            We classify PLAT Overall Scores into three bands: <span className="text-destructive font-bold">Score &lt; 50%</span> (Below Industry), <span className="text-primary font-bold">Score 50–90%</span> (Industry Level), <span className="text-green-500 font-bold">Score &gt; 90%</span> (High-Potential)
+            We classify PLAT Overall Scores into three bands: <span className="text-destructive font-bold">Score &lt; 60%</span> (Below Industry), <span className="text-primary font-bold">Score 60–90%</span> (Industry Level), <span className="text-green-500 font-bold">Score &gt; 90%</span> (High-Potential)
           </p>
           
           <div className="grid grid-cols-5 gap-3 flex-1 min-h-0">
@@ -68,7 +68,7 @@ export const ReadinessDistribution = () => {
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="text-center">
                   <p className="text-3xl font-bold text-primary">
-                    <CountUp end={35} duration={2} suffix="%" />
+                    <CountUp end={20} duration={2} suffix="%" />
                   </p>
                   <p className="text-xs text-muted-foreground">Industry Ready</p>
                 </div>
@@ -79,25 +79,25 @@ export const ReadinessDistribution = () => {
             <div className="col-span-1 flex flex-col justify-center gap-3">
               <div className="group relative bg-gradient-to-br from-destructive/20 to-destructive/5 border-2 border-destructive/40 rounded-2xl p-4 hover:border-destructive/60 hover:shadow-lg hover:shadow-destructive/20 transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-destructive/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-                <p className="text-xs text-muted-foreground font-semibold mb-1 relative z-10">Score &lt; 50%</p>
+                <p className="text-xs text-muted-foreground font-semibold mb-1 relative z-10">Score &lt; 60%</p>
                 <p className="text-3xl font-black text-destructive mb-1 relative z-10">
-                  <CountUp end={65} duration={2} suffix="%" />
+                  <CountUp end={80} duration={2} suffix="%" />
                 </p>
                 <p className="text-xs font-bold mb-2 relative z-10">Below Industry</p>
                 <div className="mt-2 h-3 bg-destructive/20 rounded-full overflow-hidden relative z-10 shadow-inner">
-                  <div className="h-full bg-gradient-to-r from-destructive to-red-600 rounded-full transition-all duration-1000" style={{width: '65%'}}></div>
+                  <div className="h-full bg-gradient-to-r from-destructive to-red-600 rounded-full transition-all duration-1000" style={{width: '80%'}}></div>
                 </div>
               </div>
 
               <div className="group relative bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/40 rounded-2xl p-4 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-                <p className="text-xs text-muted-foreground font-semibold mb-1 relative z-10">Score 50-90%</p>
+                <p className="text-xs text-muted-foreground font-semibold mb-1 relative z-10">Score 60-90%</p>
                 <p className="text-3xl font-black text-primary mb-1 relative z-10">
-                  <CountUp end={30} duration={2} suffix="%" />
+                  <CountUp end={20} duration={2} suffix="%" />
                 </p>
                 <p className="text-xs font-bold mb-2 relative z-10">Industry Ready</p>
                 <div className="mt-2 h-3 bg-primary/20 rounded-full overflow-hidden relative z-10 shadow-inner">
-                  <div className="h-full bg-gradient-to-r from-primary to-cyan-500 rounded-full transition-all duration-1000 delay-200" style={{width: '30%'}}></div>
+                  <div className="h-full bg-gradient-to-r from-primary to-cyan-500 rounded-full transition-all duration-1000 delay-200" style={{width: '20%'}}></div>
                 </div>
               </div>
 
@@ -105,11 +105,11 @@ export const ReadinessDistribution = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                 <p className="text-xs text-muted-foreground font-semibold mb-1 relative z-10">Score &gt; 90%</p>
                 <p className="text-3xl font-black text-green-500 mb-1 relative z-10">
-                  <CountUp end={5} duration={2} suffix="%" />
+                  <CountUp end={1} duration={2} decimals={0} suffix="%" prefix="<" />
                 </p>
                 <p className="text-xs font-bold mb-2 relative z-10">High Potential</p>
                 <div className="mt-2 h-3 bg-green-500/20 rounded-full overflow-hidden relative z-10 shadow-inner">
-                  <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transition-all duration-1000 delay-400" style={{width: '5%'}}></div>
+                  <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transition-all duration-1000 delay-400" style={{width: '1%'}}></div>
                 </div>
               </div>
             </div>

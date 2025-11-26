@@ -36,7 +36,7 @@ export const CityWiseReadiness = () => {
             <div className="group flex items-start gap-3 bg-gradient-to-br from-primary/15 to-primary/5 p-3 rounded-xl hover:from-primary/25 hover:to-primary/10 transition-all duration-300 border-2 border-primary/30 hover:border-primary/50 hover:scale-105">
               <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-cyan-500 mt-1 animate-pulse" />
               <p className="text-foreground font-medium text-xs">
-                % of students with PLAT Score ≥ 50
+                % of students with PLAT Score ≥ 60
               </p>
             </div>
             <div className="group flex items-start gap-3 bg-gradient-to-br from-green-500/15 to-green-500/5 p-3 rounded-xl hover:from-green-500/25 hover:to-green-500/10 transition-all duration-300 border-2 border-green-500/30 hover:border-green-500/50 hover:scale-105">
