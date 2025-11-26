@@ -3,23 +3,34 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import { programWiseSkills, topDepartments } from "@/data/departmentData";
 
 export const ProgramWiseProfiles = () => {
-  // Transform programWiseSkills data into radar chart format
   const radarData = [
     {
       skill: "Problem-Solving",
-      ...Object.fromEntries(programWiseSkills.map(p => [p.program, p.problemSolving]))
+      "B.Com": 48,
+      "BMS": 52,
+      "B.Sc IT": 68,
+      "Engineering": 70,
     },
     {
       skill: "Communication",
-      ...Object.fromEntries(programWiseSkills.map(p => [p.program, p.communication]))
+      "B.Com": 62,
+      "BMS": 65,
+      "B.Sc IT": 45,
+      "Engineering": 42,
     },
     {
       skill: "Decision-Making",
-      ...Object.fromEntries(programWiseSkills.map(p => [p.program, p.decisionMaking]))
+      "B.Com": 55,
+      "BMS": 58,
+      "B.Sc IT": 60,
+      "Engineering": 62,
     },
     {
       skill: "Analytical",
-      ...Object.fromEntries(programWiseSkills.map(p => [p.program, p.analytical]))
+      "B.Com": 52,
+      "BMS": 54,
+      "B.Sc IT": 72,
+      "Engineering": 75,
     },
   ];
 
