@@ -55,7 +55,7 @@ export const CoverSlide = () => {
 
             <div className="group relative bg-card/30 backdrop-blur-md border border-cyan-500/20 rounded-xl sm:rounded-2xl px-6 py-4 sm:px-8 sm:py-6 hover:border-cyan-500/50 hover:bg-card/50 transition-all duration-300 w-[160px] sm:min-w-[180px] md:min-w-[200px] shadow-lg hover:shadow-cyan-500/20">
               <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1">
-                <CountUp end={10} duration={1.5} />
+                <CountUp end={22} duration={1.5} />
               </p>
               <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
                 Cities
@@ -64,7 +64,7 @@ export const CoverSlide = () => {
 
             <div className="group relative bg-card/30 backdrop-blur-md border border-amber-500/20 rounded-xl sm:rounded-2xl px-6 py-4 sm:px-8 sm:py-6 hover:border-amber-500/50 hover:bg-card/50 transition-all duration-300 w-[160px] sm:min-w-[180px] md:min-w-[200px] shadow-lg hover:shadow-amber-500/20">
               <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1">
-                <CountUp end={22} duration={1.5} />+
+                <CountUp end={100} duration={1.5} />+
               </p>
               <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
                 Colleges
