@@ -82,7 +82,7 @@ export const CoverSlide = () => {
             </div>
             <span className="hidden sm:inline text-muted-foreground">|</span>
             <p className="text-[10px] sm:text-xs text-muted-foreground text-center">
-              Data from 50,000+ students • 10 cities • Multiple Colleges
+              Data from 50,000+ students • 22 cities • Multiple Colleges
             </p>
           </div>
         </div>
