@@ -1,10 +1,8 @@
 import { PresentationSlide } from "../PresentationSlide";
 import CountUp from "react-countup";
 import offeeLogoImage from "@/assets/offee-logo.png";
-
 export const CoverSlide = () => {
-  return (
-    <PresentationSlide>
+  return <PresentationSlide>
       <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
         {/* Live Color Changing Gradient Background */}
         <div className="absolute inset-0 bg-[linear-gradient(45deg,#0f172a,#1e293b,#0f172a,#334155)] bg-[length:400%_400%] animate-gradient-xy opacity-90 pointer-events-none">
@@ -46,7 +44,7 @@ export const CoverSlide = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-12">
             <div className="group relative bg-card/30 backdrop-blur-md border border-primary/20 rounded-xl sm:rounded-2xl px-4 py-4 sm:px-8 sm:py-6 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 w-[200px] sm:min-w-[200px] md:min-w-[220px] shadow-lg hover:shadow-primary/20 text-center overflow-hidden">
               <p className="text-2xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1 whitespace-nowrap">
-                <CountUp end={50000} duration={2} separator="," />+
+                <CountUp end={50000} duration={2} separator="," className="text-4xl" />+
               </p>
               <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
                 Students
@@ -55,7 +53,7 @@ export const CoverSlide = () => {
 
             <div className="group relative bg-card/30 backdrop-blur-md border border-cyan-500/20 rounded-xl sm:rounded-2xl px-4 py-4 sm:px-8 sm:py-6 hover:border-cyan-500/50 hover:bg-card/50 transition-all duration-300 w-[200px] sm:min-w-[200px] md:min-w-[220px] shadow-lg hover:shadow-cyan-500/20 text-center overflow-hidden">
               <p className="text-2xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1">
-                <CountUp end={22} duration={1.5} />
+                <CountUp end={22} duration={1.5} className="text-4xl" />
               </p>
               <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
                 Cities
@@ -63,7 +61,7 @@ export const CoverSlide = () => {
             </div>
 
             <div className="group relative bg-card/30 backdrop-blur-md border border-amber-500/20 rounded-xl sm:rounded-2xl px-4 py-4 sm:px-8 sm:py-6 hover:border-amber-500/50 hover:bg-card/50 transition-all duration-300 w-[200px] sm:min-w-[200px] md:min-w-[220px] shadow-lg hover:shadow-amber-500/20 text-center overflow-hidden">
-              <p className="text-2xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1 whitespace-nowrap">
+              <p className="text-2xl sm:text-4xl font-black text-white drop-shadow-md mb-1 whitespace-nowrap md:text-4xl">
                 <CountUp end={100} duration={1.5} />+
               </p>
               <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
@@ -89,13 +87,8 @@ export const CoverSlide = () => {
 
         {/* Offee Logo - Top Left */}
         <div className="absolute top-4 sm:top-8 left-4 sm:left-8 z-10">
-          <img
-            src={offeeLogoImage}
-            alt="Offee Logo"
-            className="h-8 sm:h-10 md:h-12 w-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-300"
-          />
+          <img src={offeeLogoImage} alt="Offee Logo" className="h-8 sm:h-10 md:h-12 w-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-300" />
         </div>
       </div>
-    </PresentationSlide>
-  );
+    </PresentationSlide>;
 };
