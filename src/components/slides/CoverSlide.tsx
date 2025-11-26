@@ -29,27 +29,46 @@ export const CoverSlide = () => {
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight drop-shadow-2xl">
               <span className="text-foreground">Offee PLAT</span>
               <br />
-              <span className="bg-gradient-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient drop-shadow-lg">Insight Note</span>
+              <span className="bg-gradient-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient drop-shadow-lg">
+                Insight Note
+              </span>
             </h1>
             <h2 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-              What <span className="text-foreground font-bold border-b-2 border-primary"><CountUp end={50000} duration={2.5} separator="," />+</span> Assessments Tell Us About <br className="hidden sm:block"/>India's Graduate Talent Landscape
+              What{" "}
+              <span className="text-foreground font-bold border-b-2 border-primary">
+                <CountUp end={50000} duration={2.5} separator="," />+
+              </span>{" "}
+              Assessments Tell Us About <br className="hidden sm:block" />
+              India's Graduate Talent Landscape
             </h2>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-12">
             <div className="group relative bg-card/30 backdrop-blur-md border border-primary/20 rounded-xl sm:rounded-2xl px-6 py-4 sm:px-8 sm:py-6 hover:border-primary/50 hover:bg-card/50 transition-all duration-300 w-[160px] sm:min-w-[180px] md:min-w-[200px] shadow-lg hover:shadow-primary/20">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={50000} duration={2} separator="," />+</p>
-              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Students</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1">
+                <CountUp end={50000} duration={2} separator="," />+
+              </p>
+              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
+                Students
+              </p>
             </div>
-            
+
             <div className="group relative bg-card/30 backdrop-blur-md border border-cyan-500/20 rounded-xl sm:rounded-2xl px-6 py-4 sm:px-8 sm:py-6 hover:border-cyan-500/50 hover:bg-card/50 transition-all duration-300 w-[160px] sm:min-w-[180px] md:min-w-[200px] shadow-lg hover:shadow-cyan-500/20">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={10} duration={1.5} /></p>
-              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Cities</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1">
+                <CountUp end={10} duration={1.5} />
+              </p>
+              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
+                Cities
+              </p>
             </div>
 
             <div className="group relative bg-card/30 backdrop-blur-md border border-amber-500/20 rounded-xl sm:rounded-2xl px-6 py-4 sm:px-8 sm:py-6 hover:border-amber-500/50 hover:bg-card/50 transition-all duration-300 w-[160px] sm:min-w-[180px] md:min-w-[200px] shadow-lg hover:shadow-amber-500/20">
-              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1"><CountUp end={18} duration={1.5} />+</p>
-              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">Universities</p>
+              <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white drop-shadow-md mb-1">
+                <CountUp end={22} duration={1.5} />+
+              </p>
+              <p className="text-xs sm:text-sm font-bold text-gray-200 drop-shadow-sm tracking-wider uppercase">
+                Colleges
+              </p>
             </div>
           </div>
         </div>
@@ -70,9 +89,9 @@ export const CoverSlide = () => {
 
         {/* Offee Logo - Top Left */}
         <div className="absolute top-4 sm:top-8 left-4 sm:left-8 z-10">
-          <img 
-            src={offeeLogoImage} 
-            alt="Offee Logo" 
+          <img
+            src={offeeLogoImage}
+            alt="Offee Logo"
             className="h-8 sm:h-10 md:h-12 w-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:drop-shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-300"
           />
         </div>
@@ -80,4 +99,3 @@ export const CoverSlide = () => {
     </PresentationSlide>
   );
 };
-
