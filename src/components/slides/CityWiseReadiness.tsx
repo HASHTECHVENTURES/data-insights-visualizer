@@ -2,13 +2,10 @@ import { PresentationSlide } from "../PresentationSlide";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
 import { cityWiseData } from "@/data/collegeData";
 import CountUp from "react-countup";
-
 export const CityWiseReadiness = () => {
   const sortedData = [...cityWiseData].sort((a, b) => b.industryReady - a.industryReady);
   const colors = ['#06b6d4', '#3b82f6', '#3b82f6', '#6366f1', '#6366f1', '#8b5cf6', '#8b5cf6', '#a78bfa'];
-
-  return (
-    <PresentationSlide title="Insight #2: Tier-2 Cities Often Match or Beat Metros">
+  return <PresentationSlide title="Insight #2: Tier-2 Cities Often Match or Beat Metros">
       <div className="w-full h-full max-w-7xl overflow-hidden relative">
         {/* Decorative background */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
@@ -27,7 +24,7 @@ export const CityWiseReadiness = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-green-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity" />
               <div className="relative bg-gradient-to-br from-cyan-500/20 to-green-500/20 border-2 border-cyan-500/50 rounded-2xl px-6 py-3 text-center backdrop-blur-sm">
                 <p className="text-xs font-bold text-cyan-400 mb-1">🏆 Top Performer</p>
-                <p className="text-2xl font-black text-foreground">Pune - <CountUp end={38} duration={2} suffix="%" /></p>
+                <p className="text-2xl font-black text-foreground">Bangalore - 38%<CountUp end={38} duration={2} suffix="%" /></p>
               </div>
             </div>
           </div>
@@ -63,33 +60,34 @@ export const CityWiseReadiness = () => {
           <div className="flex-1 min-h-0">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={sortedData} layout="vertical" barCategoryGap="15%">
-                <XAxis type="number" domain={[0, 45]} tick={{ fill: '#94a3b8', fontSize: 11 }} />
-                <YAxis 
-                  type="category" 
-                  dataKey="city" 
-                  tick={{ fill: '#f1f5f9', fontSize: 11 }} 
-                  width={140}
-                />
-                <Tooltip 
-                  contentStyle={{ backgroundColor: '#1e293b', border: '1px solid #334155', borderRadius: '8px', color: '#f1f5f9' }}
-                  itemStyle={{ color: '#f1f5f9' }}
-                  formatter={(value: number) => [`${value}%`, 'Industry Ready']}
-                  cursor={{ fill: 'rgba(59,130,246,0.1)' }}
-                />
+                <XAxis type="number" domain={[0, 45]} tick={{
+                fill: '#94a3b8',
+                fontSize: 11
+              }} />
+                <YAxis type="category" dataKey="city" tick={{
+                fill: '#f1f5f9',
+                fontSize: 11
+              }} width={140} />
+                <Tooltip contentStyle={{
+                backgroundColor: '#1e293b',
+                border: '1px solid #334155',
+                borderRadius: '8px',
+                color: '#f1f5f9'
+              }} itemStyle={{
+                color: '#f1f5f9'
+              }} formatter={(value: number) => [`${value}%`, 'Industry Ready']} cursor={{
+                fill: 'rgba(59,130,246,0.1)'
+              }} />
                 <Bar dataKey="industryReady" radius={[0, 8, 8, 0]} animationDuration={1000}>
-                  {sortedData.map((entry, index) => (
-                    <Cell 
-                      key={`cell-${index}`} 
-                      fill={colors[index]} 
-                      style={{ filter: index === 0 ? 'drop-shadow(0 0 8px #06b6d4)' : 'none', cursor: 'pointer' }}
-                    />
-                  ))}
+                  {sortedData.map((entry, index) => <Cell key={`cell-${index}`} fill={colors[index]} style={{
+                  filter: index === 0 ? 'drop-shadow(0 0 8px #06b6d4)' : 'none',
+                  cursor: 'pointer'
+                }} />)}
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
           </div>
         </div>
       </div>
-    </PresentationSlide>
-  );
+    </PresentationSlide>;
 };
