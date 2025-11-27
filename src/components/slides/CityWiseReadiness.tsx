@@ -24,7 +24,7 @@ export const CityWiseReadiness = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-green-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity" />
               <div className="relative bg-gradient-to-br from-cyan-500/20 to-green-500/20 border-2 border-cyan-500/50 rounded-2xl px-6 py-3 text-center backdrop-blur-sm">
                 <p className="text-xs font-bold text-cyan-400 mb-1">🏆 Top Performer</p>
-                
+                <p className="text-2xl font-black text-foreground">Bangalore - 38%<CountUp end={38} duration={2} suffix="%" /></p>
               </div>
             </div>
           </div>
