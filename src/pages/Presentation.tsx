@@ -9,12 +9,12 @@ import { CityWiseReadiness } from "@/components/slides/CityWiseReadiness";
 import { TierComparison } from "@/components/slides/TierComparison";
 import { CommunicationGap } from "@/components/slides/CommunicationGap";
 import { ConsistentGrowth } from "@/components/slides/ConsistentGrowth";
-import { GenderAnalysis } from "@/components/slides/GenderAnalysis";
+
 import { TalentGrid } from "@/components/slides/TalentGrid";
 import { ProgramWiseProfiles } from "@/components/slides/ProgramWiseProfiles";
 import { PresenterNotes } from "@/components/PresenterNotes";
 import { cn } from "@/lib/utils";
-const slides = [CoverSlide, ExecutiveSnapshot, DatasetSlide, ReadinessDistribution, CityWiseReadiness, TierComparison, CommunicationGap, ConsistentGrowth, GenderAnalysis, TalentGrid, ProgramWiseProfiles];
+const slides = [CoverSlide, ExecutiveSnapshot, DatasetSlide, ReadinessDistribution, CityWiseReadiness, TierComparison, CommunicationGap, ConsistentGrowth, TalentGrid, ProgramWiseProfiles];
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
